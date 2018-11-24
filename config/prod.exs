@@ -10,7 +10,7 @@ use Mix.Config
 # which you should run after static files are built and
 # before starting your production server.
 config :hello_giga, HelloGigaWeb.Endpoint,
-  http: [:inet6, port: System.get_env("PORT") || 4000],
+  http: [port: {:system, "PORT"}],
   url: [host: "flickering-blond-weaverbird.gigalixirapp.com", port: 80],
   cache_static_manifest: "priv/static/cache_manifest.json",
   server: true,
