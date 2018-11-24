@@ -16,6 +16,7 @@ defmodule HelloGigaWeb.Router do
   scope "/", HelloGigaWeb do
     pipe_through :browser
 
+    resources "/posts", PostController
     get "/", PageController, :index
   end
 
